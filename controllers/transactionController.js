@@ -47,7 +47,7 @@ exports.uploadTransaction = async (req, res) => {
 
     // Perform field-specific validations
     transactions.forEach((transactions, index) => {
-      if (transactions.transactionId.length > 7) {
+      if (transactions.transactionId.length > 15) {
         validationErrors.push(
           `Row ${index + 2}: 'Transaction Id' exceeds maximum length of 6.`
         );
